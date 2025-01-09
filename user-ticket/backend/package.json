@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "node --inspect --watch src/app.js",
+    "start": "node --inspect --watch src/userServer.js",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -46,7 +46,7 @@
     "mocha": "^11.0.1"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "main": "app.js",
+  "main": "userServer.js",
   "keywords": [],
   "author": "",
   "license": "ISC"
