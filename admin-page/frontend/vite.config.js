@@ -4,5 +4,6 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  vitePort: 5174
+  vitePort: 5174,
+  // base: '/admin-pg/',
 })

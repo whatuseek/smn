@@ -1,5 +1,4 @@
-// <-- (Reused from user-ticket)
-// smn/admin-page/backend/models/ticketModel.js
+//smn/admin-page/backend/models/ticketModel.js
 import mongoose from "mongoose";
 
 const ticketSchema = new mongoose.Schema(
@@ -10,9 +9,11 @@ const ticketSchema = new mongoose.Schema(
     issue_type: { type: String, required: true },
     comments: { type: String, required: true },
     ticket_id: { type: String, required: true, unique: true },
-    type: { type: String, default: "user" }
+    // type: { type: String, default: "user" }
   },
-  { timestamps: true }
+  { timestamps: true },
+  // Enable 
+
 );
 
 const Ticket = mongoose.model("Ticket", ticketSchema);

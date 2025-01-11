@@ -1,3 +1,5 @@
+// smn/admin-page/frontend/src/App.jsx
+
 import TicketList from './components/TicketList';
 import { useState, useEffect } from 'react';
 import axios from 'axios';

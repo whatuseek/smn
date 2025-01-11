@@ -1,12 +1,12 @@
-// "smn/user-ticket/backend/routes/ticketRoute.js"
+// // "smn/user-ticket/backend/routes/ticketRoute.js"
 
-import express from 'express';
-import { createTicket, getAllTickets } from '../controllers/ticketController.js';
+// import express from 'express';
+// import { createTicket, getAllTickets } from '../controllers/ticketController.js';
 
-const router = express.Router();
+// const router = express.Router();
 
-router.route('/')
-  .post(createTicket)
-  .get(getAllTickets);
+// router.route('/')
+//   .post(createTicket)
+//   .get(getAllTickets);
 
-export default router;
+// export default router;
