@@ -1,4 +1,4 @@
-//smn/admin-page/frontend/src/components/TicketList.jsx
+//smn/admin-page/frontend/src/components/TicketList.jsx add
 import { useEffect, useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
