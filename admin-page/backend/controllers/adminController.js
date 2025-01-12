@@ -56,6 +56,45 @@ export const getTicketsByIssueType = async (req, res) => {
     res.status(500).json({ message: "Error fetching tickets by issue type" });
   }
 };
+// Delete a ticket by ID
+export const deleteTicket = async (req, res) => {
+  const { id } = req.params;
+  try {
+      const ticket = await Ticket.findByIdAndDelete(id);
+      if (!ticket) {
+          return res.status(404).json({ message: 'Ticket not found.' });
+      }
+      res.json({ message: 'Ticket deleted successfully.' });
+  } catch (error) {
+      res.status(500).json({ message: 'Server error while deleting the ticket.' });
+  }
+};
+
+// Controller function to update ticket status
+export const updateTicketStatus = async (req, res) => {
+  const { ticket_id } = req.params; // Get ticket ID from request parameters
+  const { status } = req.body; // Get the new status from the request body
+
+  try {
+    // Find the ticket by ticket_id
+    const ticket = await Ticket.findOne({ ticket_id });
+
+    if (!ticket) {
+      return res.status(404).json({ message: 'Ticket not found' });
+    }
+
+    // Update the ticket's status
+    ticket.status = status;
+
+    // Save the updated ticket
+    await ticket.save();
+
+    // Respond with the updated ticket
+    return res.status(200).json(ticket);
+  } catch (error) {
+    return res.status(500).json({ message: 'Error updating ticket status', error });
+  }
+};
 
 
 
